@@ -19,8 +19,8 @@
 %{!?make_build:%global make_build %{__make} %{?_smp_mflags}}
 
 Name:           tlog
-Version:        12.1
-Release:        2%{?dist}
+Version:        13
+Release:        1%{?dist}
 Summary:        Terminal I/O logger
 
 %if "%{_vendor}" == "debbuild"
@@ -156,6 +156,10 @@ systemd-tmpfiles --create %{name}.conf >/dev/null 2>&1 || :
 /sbin/ldconfig
 
 %changelog
+* Mon Apr 17 2023 Justin Stephenson <jstephen@redhat.com> - 13-1
+- Update the Fedora license
+- MAN: Add missing comma in tlog-rec-session.conf
+
 * Thu Apr 21 2022 Justin Stephenson <jstephen@redhat.com> - 12.1
 - Exit transfer loop when output fd is closed
 - Revert "Prevent infinite transfer loop on GDM login"
