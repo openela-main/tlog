@@ -1,5 +1,5 @@
 Name:       tlog
-Version:    12.1
+Version:    13
 Release:    2%{?dist}
 Summary:    Terminal I/O logger
 
@@ -108,6 +108,10 @@ rm -r %{buildroot}/usr/include/%{name}
 /sbin/ldconfig
 
 %changelog
+* Mon Apr 17 2023 Justin Stephenson <jstephen@redhat.com> - 13-1
+- Update the Fedora license
+- MAN: Add missing comma in tlog-rec-session.conf
+
 * Mon May 23 2022 Justin Stephenson <jstephen@redhat.com> - 12.1
 - Exit transfer loop when output fd is closed
 - Revert "Prevent infinite transfer loop on GDM login"
